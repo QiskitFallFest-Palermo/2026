@@ -1,0 +1,118 @@
+/* Theme foundations */
+
+:root {
+    --focus-ring-inner: #fff;
+    --focus-ring-outer: #101820;
+
+    /* Navigation surfaces, in the same deep-navy family as the hero scrim. */
+    --nav-surface: #101a3d;
+    --nav-surface-raised: #17224e;
+
+    /* Responsive type scale: see docs/typography.md. */
+    --type-small: clamp(0.875rem, 0.85rem + 0.125vw, 0.9375rem);
+    --type-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+    --type-control: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem);
+    --type-lead: clamp(1.125rem, 1.075rem + 0.25vw, 1.25rem);
+    --type-h6: clamp(1rem, 0.975rem + 0.125vw, 1.0625rem);
+    --type-h5: var(--type-lead);
+    --type-h4: clamp(1.25rem, 1.175rem + 0.375vw, 1.375rem);
+    --type-h3: clamp(1.375rem, 1.25rem + 0.625vw, 1.625rem);
+    --type-h2: clamp(1.625rem, 1.4rem + 1.125vw, 2.125rem);
+    --type-h1: clamp(2rem, 1.6rem + 2vw, 3rem);
+    --type-section-heading: clamp(1.75rem, 1.45rem + 1.5vw, 2.5rem);
+    --type-hero: clamp(2.5rem, 1.75rem + 3.75vw, 4.75rem);
+    --leading-body: 1.65;
+    --leading-heading: 1.2;
+    --leading-meta: 1.5;
+    --leading-control: 1.25;
+}
+
+body {
+    font-size: var(--type-body);
+    line-height: var(--leading-body);
+}
+
+p,
+li {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.lead,
+p.large {
+    font-size: var(--type-lead);
+    line-height: 1.55;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: var(--leading-heading);
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+}
+
+h1 { font-size: var(--type-h1); }
+h2 { font-size: var(--type-h2); }
+h3 { font-size: var(--type-h3); }
+h4 { font-size: var(--type-h4); }
+h5 { font-size: var(--type-h5); }
+h6 { font-size: var(--type-h6); }
+
+section h2.section-heading {
+    font-size: var(--type-section-heading);
+    line-height: var(--leading-heading);
+}
+
+small,
+.small,
+.post-date,
+caption,
+figcaption,
+.text-meta {
+    font-size: var(--type-small);
+    line-height: var(--leading-meta);
+}
+
+button,
+input,
+select,
+textarea,
+.btn,
+.nav-link,
+summary {
+    font-size: var(--type-control);
+    line-height: var(--leading-control);
+}
+
+/*
+ * The two-tone ring remains visible on light, dark, blue, and image
+ * backgrounds. Important declarations prevent component and Bootstrap
+ * shadows from suppressing this keyboard-only accessibility affordance.
+ */
+:where(
+    a[href],
+    button,
+    input:not([type="hidden"]),
+    select,
+    textarea,
+    summary,
+    iframe,
+    [contenteditable="true"],
+    [tabindex]:not([tabindex="-1"])
+):focus-visible {
+    outline: 3px solid var(--focus-ring-inner) !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 7px var(--focus-ring-outer) !important;
+}
+
+/*
+ * The hero wallpaper is rendered as an <img> inside .full-jumbo
+ * (see assets/css/components.css) so it always covers the viewport.
+ */
+#navbarHome:not(.navbar-shrink):not(.menu-open) {
+    background-color: transparent;
+}

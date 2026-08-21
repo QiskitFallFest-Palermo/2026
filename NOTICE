@@ -1,0 +1,66 @@
+Qiskit Fall Fest 2026 @ Università degli Studi di Palermo, Italy
+Copyright 2026 Alberto Miserendino, Roberto Battaglia, Francesca Pagano
+
+## License
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+## Notice to Derivative Works
+This project is licensed under the Apache License 2.0. If you use or distribute this code (with or without modifications), you are required to:
+1. Proper attribution to the original authors and providing a link to the original repository. Retain the following attribution in documentation or credits:
+   ```
+	This project is based on code originally developed by Alberto Miserendino, Roberto Battaglia, Francesca Pagano for the "Qiskit Fall Fest 2026 @ Palermo" event. 
+	The original repository is available at https://github.com/QiskitFallFest-Palermo/2026 .
+   ``` 
+2. Include the original `LICENSE` and `NOTICE` files in your distribution.
+3. Clearly indicate any modifications made to the original project.
+4. Adhere to the terms specified in the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+5. Ensure compliance with third-party licensing terms, including those governing logos and branding.
+
+## Authors
+The primary authors of this project are
+- [Alberto Miserendino](https://github.com/AlbertoMiserendino)
+- [Roberto Battaglia](https://github.com/robertobatts)
+- [Francesca Pagano](https://github.com/paganofrancesca)
+
+## Collaborators
+This project also benefited from contributions by
+- [Giovanni La Tona](https://www.instagram.com/noxil_art/)
+
+## Contributions
+This project contains contributions from the following third-party sources:
+
+1. **Qiskit Fall Fest 2026 official graphics** (https://www.ibm.com/quantum)
+   - Copyright © 2026 IBM Quantum
+
+2. **[The quantum micio](https://github.com/QiskitFallFest-Palermo/2023/tree/main/assets/img/micio)**
+   - Copyright © 2023 Giovanni La Tona
+
+3. **Logos and Branding**
+
+    The logos used in this project, including but not limited to:
+     - Qiskit logo
+     - IBM Quantum logo
+     - Università degli Studi di Palermo logo
+     - Dipartimento di Fisica e Chimica "Emilio Segrè" (DiFC) - UNIPA logo
+     - AISF (Associazione Italiana Studenti di Fisica) logo
+     - Vivere Ateneo logo
+     - Vivere Scienze MM.FF.NN. logo
+     - Vivere Ingegneria logo
+     - Nexum s.r.l. logo
+  
+    are the property of their respective owners. These logos are used solely for informational and event-related purposes. Redistribution or reuse of these logos without permission from their respective owners is strictly prohibited.
+
+4. **Agency Theme for Jekyll** ([y7kim/agency-jekyll-theme](https://github.com/y7kim/agency-jekyll-theme))
+   - Licensed under the Apache License 2.0
+

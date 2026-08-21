@@ -1,0 +1,26 @@
+.logotype {
+    font-family: Tektur,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.logotype-effects {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    color: white;
+}
+
+/*.ibm {
+    font-family: "IBM Plex Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}*/
+
+.italy>.green {
+    color: #009246; /*Pantone 17-6153, 'Fern green'*/
+    color: #00eb71; /*unofficial, but more light*/
+}
+.italy>.white {
+    color: #F4F5F0; /*Pantone 11-0601 'Bright White'*/
+}
+.italy>.red {
+    color: #ff6b6b;
+}
