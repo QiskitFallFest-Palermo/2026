@@ -1,0 +1,211 @@
+/* Theme foundations */
+
+:root {
+    --focus-ring-inner: #fff;
+    --focus-ring-outer: #101820;
+
+    /* Navigation surfaces, in the same deep-navy family as the hero scrim. */
+    --nav-surface: #101a3d;
+    --nav-surface-raised: #17224e;
+
+    /* Responsive type scale: see docs/typography.md. */
+    --type-small: clamp(0.875rem, 0.85rem + 0.125vw, 0.9375rem);
+    --type-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+    --type-control: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem);
+    --type-lead: clamp(1.125rem, 1.075rem + 0.25vw, 1.25rem);
+    --type-h6: clamp(1rem, 0.975rem + 0.125vw, 1.0625rem);
+    --type-h5: var(--type-lead);
+    --type-h4: clamp(1.25rem, 1.175rem + 0.375vw, 1.375rem);
+    --type-h3: clamp(1.375rem, 1.25rem + 0.625vw, 1.625rem);
+    --type-h2: clamp(1.625rem, 1.4rem + 1.125vw, 2.125rem);
+    --type-h1: clamp(2rem, 1.6rem + 2vw, 3rem);
+    --type-section-heading: clamp(1.75rem, 1.45rem + 1.5vw, 2.5rem);
+    --type-hero: clamp(2.5rem, 1.75rem + 3.75vw, 4.75rem);
+    --leading-body: 1.65;
+    --leading-heading: 1.2;
+    --leading-meta: 1.5;
+    --leading-control: 1.25;
+}
+
+/*
+ * Design tokens.
+ *
+ * One shared vocabulary for the surfaces, ink, accents, radii, shadows and
+ * motion used outside the hero. Components must reference these instead of
+ * repeating literal colours, so the whole page can be retuned from here.
+ */
+:root {
+    /* Ink: one ramp from headings down to muted metadata. */
+    --ink-900: #0b1533;
+    --ink-800: #16224a;
+    --ink-700: #26324f;
+    --ink-600: #3c4763;
+    --ink-500: #55617c;
+    --ink-400: #6f7a94;
+
+    /* Accent: the brand blue, plus the violet from the 2026 pictogram. */
+    --accent: #{{ site.data.template.color.primary }};
+    --accent-strong: #{{ site.data.template.color.secondary }};
+    --accent-deep: #16406f;
+    --accent-violet: #7b5cf0;
+    --accent-tint: rgba(45, 125, 199, 0.09);
+    --accent-tint-strong: rgba(45, 125, 199, 0.16);
+    --accent-gradient: linear-gradient(118deg, var(--accent) 0%, var(--accent-strong) 62%, var(--accent-deep) 100%);
+    --accent-rule: linear-gradient(90deg, var(--accent) 0%, var(--accent-violet) 100%);
+
+    /*
+     * Navigation bar: navy on the left, warming into brand blue on the right,
+     * so the scrolled bar reads blue rather than grey over a light page.
+     *
+     * The alpha floor is set by contrast, not by taste. Over white, the
+     * lightest stop composites to rgb(56, 98, 148), which holds the 4.5:1 the
+     * nav links need at 82% white. Thinning it further looks better and fails.
+     */
+    --nav-gradient: linear-gradient(100deg, rgba(10, 24, 60, 0.90) 0%, rgba(17, 50, 102, 0.88) 42%, rgba(24, 72, 130, 0.86) 100%);
+    --nav-gradient-opaque: linear-gradient(100deg, #0c183a 0%, #123060 42%, #1d5491 100%);
+
+    /* Surfaces. The muted tone is deliberately close to white: the page is
+       paced with whitespace and elevation rather than with colour bands. */
+    --surface: #fff;
+    --surface-muted: #f5f8fc;
+    --surface-sunken: #eef3fa;
+    --surface-invert: #0b1533;
+
+    /* Hairlines and elevation. Shadows are layered (a tight contact shadow
+       plus a wide, soft ambient one) so cards read as lifted, not outlined. */
+    --hairline: rgba(11, 21, 51, 0.08);
+    --hairline-strong: rgba(11, 21, 51, 0.14);
+    --shadow-sm: 0 1px 2px rgba(11, 21, 51, 0.04), 0 4px 12px -4px rgba(11, 21, 51, 0.08);
+    --shadow-md: 0 1px 2px rgba(11, 21, 51, 0.04), 0 14px 34px -10px rgba(11, 21, 51, 0.13);
+    --shadow-lg: 0 2px 4px rgba(11, 21, 51, 0.06), 0 30px 60px -18px rgba(11, 21, 51, 0.22);
+    --shadow-accent: 0 10px 26px -8px rgba(31, 92, 157, 0.45);
+    --shadow-accent-raised: 0 18px 38px -10px rgba(31, 92, 157, 0.52);
+
+    /* Radii. */
+    --radius-xs: 0.5rem;
+    --radius-sm: 0.75rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+    --radius-pill: 999px;
+
+    /* Vertical rhythm. */
+    --section-space: clamp(4rem, 3rem + 5vw, 7rem);
+    --section-header-space: clamp(2.25rem, 1.75rem + 2.5vw, 3.75rem);
+
+    /* Motion. */
+    --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --dur-fast: 160ms;
+    --dur: 240ms;
+    --dur-slow: 620ms;
+}
+
+body {
+    font-size: var(--type-body);
+    line-height: var(--leading-body);
+}
+
+p,
+li {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.lead,
+p.large {
+    font-size: var(--type-lead);
+    line-height: 1.55;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: var(--leading-heading);
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+}
+
+h1 { font-size: var(--type-h1); }
+h2 { font-size: var(--type-h2); }
+h3 { font-size: var(--type-h3); }
+h4 { font-size: var(--type-h4); }
+h5 { font-size: var(--type-h5); }
+h6 { font-size: var(--type-h6); }
+
+section h2.section-heading {
+    font-size: var(--type-section-heading);
+    line-height: var(--leading-heading);
+}
+
+small,
+.small,
+.post-date,
+caption,
+figcaption {
+    font-size: var(--type-small);
+    line-height: var(--leading-meta);
+}
+
+button,
+input,
+select,
+textarea,
+.btn,
+.nav-link,
+summary {
+    font-size: var(--type-control);
+    line-height: var(--leading-control);
+}
+
+/*
+ * Inline links inside running prose keep a non-colour cue, which the previous
+ * blanket `text-decoration: none !important` removed. Navigation, buttons,
+ * cards and logotypes stay undecorated: they already read as controls.
+ */
+:is(.about-copy, .about-quote, .theme-copy, .venue-attendance, .section-lead,
+    .page-content, .post-content, .post-excerpt, .accordion-body) :is(p, li, cite, address) a[href] {
+    text-decoration: underline;
+    text-decoration-thickness: 0.07em;
+    text-decoration-color: var(--accent-tint-strong);
+    text-underline-offset: 0.18em;
+    transition: color var(--dur-fast) var(--ease-out), text-decoration-color var(--dur-fast) var(--ease-out);
+}
+
+:is(.about-copy, .about-quote, .theme-copy, .venue-attendance, .section-lead,
+    .page-content, .post-content, .post-excerpt, .accordion-body) :is(p, li, cite, address) a[href]:hover,
+:is(.about-copy, .about-quote, .theme-copy, .venue-attendance, .section-lead,
+    .page-content, .post-content, .post-excerpt, .accordion-body) :is(p, li, cite, address) a[href]:focus-visible {
+    text-decoration-color: currentColor;
+}
+
+/*
+ * The two-tone ring remains visible on light, dark, blue, and image
+ * backgrounds. Important declarations prevent component and Bootstrap
+ * shadows from suppressing this keyboard-only accessibility affordance.
+ */
+:where(
+    a[href],
+    button,
+    input:not([type="hidden"]),
+    select,
+    textarea,
+    summary,
+    iframe,
+    [contenteditable="true"],
+    [tabindex]:not([tabindex="-1"])
+):focus-visible {
+    outline: 3px solid var(--focus-ring-inner) !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 7px var(--focus-ring-outer) !important;
+}
+
+/*
+ * The hero wallpaper is rendered as an <img> inside .full-jumbo
+ * (see assets/css/components.css) so it always covers the viewport.
+ */
+#navbarHome:not(.navbar-shrink):not(.menu-open) {
+    background-color: transparent;
+}

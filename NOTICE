@@ -1,0 +1,46 @@
+Qiskit Fall Fest 2026 @ Palermo
+Copyright 2026 Alberto Miserendino, Roberto Battaglia, Francesca Pagano
+
+## License
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
+You may obtain a copy of the License at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and limitations under the License.
+
+## Notice to Derivative Works
+This project is licensed under the Apache License 2.0. If you use or distribute this code (with or without modifications), you are required to:
+1. Proper attribution to the original authors and providing a link to the original repository. Retain the following attribution in documentation or credits:
+   ```
+	This project is based on code originally developed by Alberto Miserendino, Roberto Battaglia, Francesca Pagano for the "Qiskit Fall Fest 2026 @ Palermo" event. 
+	The original repository is available at https://github.com/QiskitFallFest-Palermo/2026 .
+   ``` 
+2. Include the original `LICENSE` and `NOTICE` files in your distribution.
+3. Clearly indicate any modifications made to the original project.
+4. Adhere to the terms specified in the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+5. Ensure compliance with third-party licensing terms, including those governing logos and branding.
+
+## Authors
+The authors of this project are
+
+- Alberto Miserendino (https://github.com/AlbertoMiserendino)
+- Roberto Battaglia (https://github.com/robertobatts)
+- Francesca Pagano (https://github.com/paganofrancesca)
+
+
+## Contributions
+This project contains contributions from the following third-party sources:
+
+1. **Qiskit Fall Fest 2026 official graphics** (https://www.ibm.com/quantum)
+   - Copyright © 2026 IBM Quantum
+   - The Qiskit Fall Fest 2026 visual theme featuring birds belongs to IBM Quantum and is used with permission for the Qiskit Fall Fest 2026 @ Palermo event.
+   - The illustration set (clouds, processor birds and stickers) in `assets/img/qff/` comes from the official event materials at  https://github.com/Qiskit-Fall-Fest-2026/materials-resources and is licensed under the MIT License, Copyright © 2026 Qiskit Fall Fest 2026.
+
+2. **Qiskit Fall Fest sites data**
+   - The Qiskit Fall Fest sites data was provided by IBM Quantum and reflects the information available as of 04/09/2026.
+
+3. **Logos and Branding**
+   - The logos used in this project are the property of their respective owners and are used with permission solely for informational and event-related purposes. Redistribution or reuse of these logos without permission from their respective owners is strictly prohibited.
