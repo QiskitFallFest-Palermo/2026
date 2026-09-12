@@ -1,0 +1,55 @@
+{
+  "name": "Qiskit Fall Fest 2026 @ Palermo",
+  "short_name": "QFF26 Palermo",
+  "id": "/2026/",
+  "description": "Let's discover quantum computing!",
+  "start_url": "/2026/",
+  "scope": "/2026/",
+  "display": "standalone",
+  "theme_color": "#101820",
+  "background_color": "#ffffff",
+
+  "icons": [
+    {
+      "src": "/2026/assets/img/pwa/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/2026/assets/img/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/2026/assets/img/pwa/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/2026/assets/img/pwa/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+
+  "screenshots": [
+    {
+      "src": "/2026/assets/img/pwa/screenshot-desktop.webp",
+      "sizes": "1280x720",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Qiskit Fall Fest 2026 @ Palermo on desktop"
+    },
+    {
+      "src": "/2026/assets/img/pwa/screenshot-mobile.webp",
+      "sizes": "720x1280",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Qiskit Fall Fest 2026 @ Palermo on mobile"
+    }
+  ]
+}
