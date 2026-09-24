@@ -1,0 +1,45 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Qiskit Fall Fest Palermo//QFF 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Qiskit Fall Fest 2026 @ Palermo
+X-WR-TIMEZONE:Europe/Rome
+X-WR-CALDESC:Qiskit Fall Fest 2026 @ Palermo
+
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+X-LIC-LOCATION:Europe/Rome
+
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+
+END:VTIMEZONE
+
+BEGIN:VEVENT
+UID:qff2026-palermo@qiskitfallfest-palermo.github.io
+DTSTAMP:20260923T231600Z
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261128
+SUMMARY:Qiskit Fall Fest 2026 @ Palermo
+LOCATION:Dipartimento di Fisica e Chimica “Emilio Segrè”\, Via Archirafi\, 36\, 90123 Palermo PA\, Italy
+DESCRIPTION:Qiskit Fall Fest 2026 @ Palermo.\n\nFive days dedicated to quantum computing\, Qiskit\, hands-on workshops\, talks and community meetups.\n\n23–27 November 2026 · Palermo\, Italy\n\nProgramme and updates: https://qiskitfallfest-palermo.github.io/2026/
+URL:https://qiskitfallfest-palermo.github.io/2026/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+
+END:VCALENDAR
