@@ -1,0 +1,10 @@
+/*! SOURCE CODE LICENSED UNDER THE APACHE LICENSE 2.0.
+
+ORIGINAL VISUAL IDENTITY, DESIGN, BRANDING, AND CREATIVE CONTENT
+© 2026 — ALL RIGHTS RESERVED, UNLESS OTHERWISE STATED.
+
+THIRD-PARTY TRADEMARKS, LOGOS, IMAGES, AND OTHER ASSETS REMAIN THE PROPERTY OF THEIR RESPECTIVE OWNERS.
+SEE THE NOTICE FILE FOR ATTRIBUTION AND APPLICABLE TERMS.
+
+LEARN FROM THE CODE. BUILD UPON IT. CREATE YOUR OWN IDENTITY. */
+!function(){"use strict";var e,t,n=null,a=window.matchMedia("(display-mode: standalone)").matches||!0===window.navigator.standalone,i=document.querySelector("[data-install-page]"),o=document.querySelector("[data-install-page-action]"),r=document.querySelector("[data-install-status]"),d=document.querySelectorAll("[data-browser-card]");function s(e){r&&(r.textContent=e,r.hidden=!e)}function l(){var e=window.navigator.userAgent;return/iphone|ipad|ipod/i.test(window.navigator.userAgent)||"MacIntel"===window.navigator.platform&&window.navigator.maxTouchPoints>1?"ios":/samsungbrowser\//i.test(e)?"samsung":/edg\//i.test(e)?"edge":/opera|opr\//i.test(e)?/android/i.test(e)?"opera-android":"opera":/firefox\//i.test(e)?/android/i.test(e)?"firefox-android":"firefox":/chrome\//i.test(e)||/chromium\//i.test(e)?"chrome":/safari\//i.test(e)&&/macintosh|mac os x/i.test(e)?"safari-macos":null}function c(){o&&(o.hidden=!n),i&&s(a?"App already installed":"")}i&&(window.addEventListener("beforeinstallprompt",function(e){e.preventDefault(),n=e,c()}),window.addEventListener("appinstalled",function(){n=null,a=!0,c()}),o&&o.addEventListener("click",async function(){n&&(await n.prompt(),n.userChoice.then(function(){n=null,c()}))}),d.forEach(function(e){e.addEventListener("toggle",function(){e.open&&d.forEach(function(t){t!==e&&(t.open=!1)})})}),c(),i&&(e=l(),t=null,d.forEach(function(n){n.getAttribute("data-browser-card")===e&&(t=n)}),t&&(d.forEach(function(e){var n=e===t;e.classList.toggle("is-highlighted",n),e.open=n}),t.parentElement.firstElementChild!==t&&t.parentElement.insertBefore(t,t.parentElement.firstElementChild),t.querySelector("summary").insertBefore(document.createTextNode("(detected) "),t.querySelector("summary").firstChild))))}();
