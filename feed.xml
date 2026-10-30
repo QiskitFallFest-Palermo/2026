@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Qiskit Fall Fest 2026 @ Palermo</title>
+    <description>Let&apos;s discover quantum computing!</description>
+    <link>https://qiskitfallfest-palermo.github.io/2026/</link>
+    <atom:link href="https://qiskitfallfest-palermo.github.io/2026/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 30 Oct 2026 14:43:43 +0000</pubDate>
+    <lastBuildDate>Fri, 30 Oct 2026 14:43:43 +0000</lastBuildDate>
+    <generator>Jekyll v4.3.4</generator>
+    
+      <item>
+        <title>CFU recognition for UNIPA students</title>
+        <description>
+
+&lt;div class=&quot;article-stack&quot;&gt;
+    &lt;p class=&quot;article-lead&quot;&gt;
+        Participation in Qiskit Fall Fest 2026 @ Palermo may contribute to the recognition of university
+        credits (CFU) for eligible University of Palermo students. Requirements depend on the
+        participant&apos;s degree programme.
+    &lt;/p&gt;
+
+    
+    &lt;div class=&quot;article-callout&quot; aria-labelledby=&quot;cfu-status-title&quot;&gt;
+        &lt;span class=&quot;article-callout__icon&quot; aria-hidden=&quot;true&quot;&gt;
+            &lt;i class=&quot;fa-solid fa-hourglass-half&quot;&gt;&lt;/i&gt;
+        &lt;/span&gt;
+        &lt;div&gt;
+            &lt;h2 class=&quot;article-callout__title&quot; id=&quot;cfu-status-title&quot;&gt;Recognition details are being finalised&lt;/h2&gt;
+            &lt;p&gt;
+                Eligible degree programmes and their recognition requirements will be published here as soon as they are confirmed.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+
+    
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
+        <link>https://qiskitfallfest-palermo.github.io/2026/cfu-unipa/</link>
+        <guid isPermaLink="true">https://qiskitfallfest-palermo.github.io/2026/cfu-unipa/</guid>
+        
+        <category>UNIPA</category>
+        
+        
+        <category>UNIPA</category>
+        
+      </item>
+    
+  </channel>
+</rss>
