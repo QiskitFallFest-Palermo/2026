@@ -1,0 +1,160 @@
+:root {
+  color-scheme: light;
+  --ink: #151a36;
+  --muted: #49546b;
+  --purple: #53258d;
+  --pale: #f3edff;
+  --line: #d7dce6;
+  --navy: #101a3d;
+  --green: #16654c;
+}
+* {box-sizing: border-box}
+html {scroll-behavior: smooth}
+body {margin: 0; background: #fafbfe; color: var(--ink); font: 1.02rem/1.55 "IBM Plex Sans", Arial, sans-serif}
+a {color: #483285; text-underline-offset: .2em}
+button, textarea, input {font: inherit}
+button {cursor: pointer}
+button:disabled {cursor: default}
+:focus-visible, #activity-title:focus {outline: 3px solid #0955ce; outline-offset: 4px}
+[hidden] {display: none !important}
+.wrap {width: min(1180px, calc(100% - 5rem)); margin-inline: auto}
+.sr, .skip:not(:focus) {position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap}
+.skip:focus {position: fixed; z-index: 3; padding: .7rem; background: white}
+.bar {background: var(--navy); color: white}
+.top {height: 64px; display: flex; align-items: center; justify-content: space-between; gap: .8rem}
+.brand {font-size: clamp(1.15rem, 2.2vw, 1.55rem); text-decoration: none; color: white; white-space: nowrap}
+.short {display: none}
+.materials {font-size: .95rem; color: #e6e8f2}
+.hero {margin-top: 1.8rem; display: grid; grid-template-columns: 1.65fr 1fr; min-height: 215px; overflow: hidden; background: #ede5ff; border: 1px solid #c6b5e6; border-radius: 14px; position: relative}
+.hero-copy {padding: clamp(1.4rem, 3vw, 2.4rem); padding-right: .6rem; z-index: 1}
+.kicker, .eyebrow {text-transform: uppercase; letter-spacing: .12em; font-weight: 700; font-size: .77rem; color: #563289; margin: 0 0 .35rem}
+h1, h2, h3, h4, p {margin-top: 0}
+h1 {font-family: Tektur, sans-serif; font-weight: 600; font-size: clamp(2.5rem, 5.7vw, 4.6rem); line-height: 1.04; letter-spacing: -.055em; margin-bottom: .7rem; color: #24113f}
+.hero-copy > p:not(.kicker) {margin-bottom: .8rem; max-width: 39rem; color: #38314a; font-size: 1.1rem; line-height: 1.45}
+.hero-actions {display: flex; align-items: center; flex-wrap: wrap; gap: .6rem 1rem; color: #4e4066; font-size: .94rem}
+.hero-actions a {display: inline-block; text-decoration: none; border-radius: 6px; padding: .55rem 1rem; font-weight: 600}
+.art {isolation: isolate; position: relative; overflow: hidden; background-image: radial-gradient(#aa91cb 1px, transparent 1.2px); background-size: 13px 13px; mask-image: linear-gradient(90deg, transparent, black 18%)}
+.falcon {position: absolute; height: 85%; max-width: 81%; object-fit: contain; top: 6%; right: 16%; filter: drop-shadow(4px 6px 0 rgba(68,28,107,.12)); transform: rotate(-5deg)}
+.cloud {position: absolute; width: 42%; opacity: .89}
+.far {top: 7%; right: -7%; width: 48%}
+.near {bottom: -9%; left: -4%; z-index: -1}
+.orbit {position: absolute; width: 64%; aspect-ratio: 1; border: 1px solid #b99bd7; border-radius: 50%; bottom: -35%; right: 17%; box-shadow: 0 0 0 18px #eee4ff, 0 0 0 19px #c6abdf}
+.journey {margin: 1.6rem 0 1.7rem}
+.section-line, .progress-label, .actions, .lesson-nav, .section-label, .step-meta {display: flex; align-items: center; gap: .7rem}
+.section-line, .step-meta {justify-content: space-between}
+.section-line {margin-bottom: .75rem}
+h2, h3, h4, legend {line-height: 1.25}
+h2 {font-size: 1.45rem; letter-spacing: -.035em; margin-bottom: 0}
+.progress-label {color: var(--muted); font-size: .9rem; flex-wrap: wrap}
+progress {width: 4.5rem; height: .4rem; border-radius: 10px; border: none; background: #dde0ea; appearance: none}
+progress::-webkit-progress-bar {background: #dde0ea; border-radius: 10px}
+progress::-webkit-progress-value {background: var(--purple); border-radius: 10px}
+progress::-moz-progress-bar {background: var(--purple)}
+#map {display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.3rem; position: relative}
+#map::before {content: ''; position: absolute; inset: 50% 2rem auto; border-top: 2px solid #b3a1c9}
+.step {z-index: 1; display: grid; position: relative; border: 1px solid #cbd2e0; border-radius: 10px; background: #fff; padding: .78rem 1.1rem; text-align: left; color: var(--ink); min-width: 0; align-content: start}
+.step[aria-current="step"] {border: 2px solid #7240b5; padding: calc(.78rem - 1px) calc(1.1rem - 1px); background: #f6f0ff}
+.step:disabled {background: #f0f2f7; color: #38435a}
+.step-meta {font-size: .81rem; color: #4f5369; font-weight: 600}
+.step strong {font-family: Tektur, sans-serif; font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; margin-top: .2rem; letter-spacing: -.025em}
+.state {display: inline-flex; align-items: center; gap: .3rem; font-weight: 400}
+.state svg {height: .9rem; width: .9rem}
+.step[aria-current] .step-meta {color: var(--purple)}
+#workspace {display: grid; grid-template-columns: minmax(195px, .29fr) minmax(0,1fr); gap: 1.4rem; scroll-margin-top: .8rem; align-items: start}
+.side, .paper {min-width: 0; border: 1px solid var(--line); border-radius: 12px; background: white}
+.side {padding: 1.15rem .7rem}
+.side h3 {font-size: 1.07rem; margin: 0 .55rem .8rem}
+.side ol {list-style: none; margin: 0; padding: 0}
+.side button {border: 0; width: 100%; display: flex; gap: .6rem; padding: .55rem .6rem; text-align: left; align-items: center; background: transparent; color: var(--muted); border-radius: 6px; line-height: 1.35; min-height: 42px; font-size: .95rem}
+.side button[aria-current] {background: var(--pale); color: var(--purple); font-weight: 700}
+.side button:hover, .secondary:hover, .step:enabled:hover {border-color: #7755a7; background-color: #f3eff9}
+.marker {font: .83rem/1 ui-monospace, monospace; color: inherit; width: 1.2rem; flex-shrink: 0}
+.paper {padding: clamp(1.1rem, 2.8vw, 2rem); box-shadow: 0 6px 22px #17244208; overflow-wrap: anywhere}
+.paper h2 {font-size: clamp(1.65rem, 3vw, 2.25rem); margin-bottom: .55rem}
+.paper h3 {font-size: 1.15rem; margin-bottom: .5rem}
+.paper p {max-width: 74ch; margin-bottom: .85rem}
+.paper p.eyebrow {margin-bottom: .35rem}
+.activity-text {color: #343f54}
+.demo, .formula, .example {border: 1px solid #dad6e8; background: #f7f5fb; border-radius: 8px; padding: 1rem 1.2rem; margin: .95rem 0}
+.demo {display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem}
+.demo p, .example p:last-child {margin: 0}
+.bits {display: flex; gap: .35rem; align-items: center}
+.bits button {background: #fff; border: 1px solid #a99bbf; border-radius: 5px; width: 2.45rem; height: 2.6rem; font: bold 1.1rem ui-monospace,monospace; color: var(--purple)}
+.bits button[aria-pressed=true] {background: var(--purple); color: white}
+.bits output {font: bold 1.15rem ui-monospace,monospace; min-width: 3rem; color: var(--purple)}
+.formula, code, textarea, pre {font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+.formula {color: var(--purple); font-size: 1rem; white-space: pre-wrap}
+.quiz {border-top: 1px solid var(--line); padding-top: 1.1rem; margin-top: 1.2rem}
+fieldset {border: none; padding: 0; min-width: 0; margin: 0 0 1.2rem}
+legend {font-weight: 700; padding: 0; margin: 0 0 .6rem}
+.choice {display: flex; align-items: baseline; gap: .5rem; cursor: pointer; border: 1px solid var(--line); padding: .47rem .8rem; border-radius: 6px; margin: .34rem 0; width: fit-content; min-width: min(100%,13rem); background: #fff}
+.choice:has(:checked) {color: var(--purple); background: var(--pale); border-color: #875bb7}
+.choice input {accent-color: var(--purple)}
+.primary, .secondary {display: inline-flex; justify-content: center; align-items: center; padding: .58rem 1rem; border-radius: 6px; border: 1px solid var(--purple); font-weight: 700; min-height: 42px; line-height: 1.2}
+.primary {background: var(--purple); color: white}
+.primary:hover {background: #40136f}
+.secondary {background: white; color: var(--purple); border-color: #baaacd}
+button:disabled {opacity: 1}
+.actions button:disabled {color: #626776; background: #e9ebee; border-color: #b5b9c0}
+.actions, .lesson-nav {flex-wrap: wrap}
+.lesson-nav {margin-top: 1.2rem; border-top: 1px solid var(--line); padding-top: 1rem; justify-content: space-between}
+.feedback {margin: .5rem 0 0; font-size: .96rem; color: #6c4515}
+.feedback.pass {color: var(--green); font-weight: 700}
+.hint-list {padding-left: 1.4rem; color: #453353}
+.editor-head {background: #28233e; color: #e8ddf8; border-radius: 8px 8px 0 0; padding: .5rem .85rem; display: flex; justify-content: space-between; align-items: center; font: .9rem/1.45 ui-monospace,monospace}
+textarea {display: block; width: 100%; background: #191725; color: #f3effc; border: 1px solid #28233e; resize: vertical; border-radius: 0 0 8px 8px; padding: .8rem 1rem; font-size: 1rem; line-height: 1.6; tab-size: 4; margin-bottom: .8rem; min-height: 10rem; overflow: auto}
+pre {white-space: pre-wrap; overflow-wrap: anywhere; margin: .6rem 0; font-size: .95rem}
+details {border-top: 1px solid var(--line); margin-top: .9rem; padding-top: .65rem}
+summary {cursor: pointer; color: var(--purple); font-weight: 700; min-height: 30px}
+.guide {font-size: .95rem}
+.result:not(:empty), .complete {margin-top: .85rem; border-left: 4px solid #8463ab; background: #f5f2fb; padding: .7rem 1rem}
+.result:empty {display: none}
+.result p:last-child, .complete p:last-child {margin-bottom: 0}
+.result[data-outcome=pass], .complete {border-color: var(--green); background: #eef7f1}
+.result[data-outcome=error] {border-color: #9a5f17; background: #fdf5ea}
+table {border-collapse: collapse; max-width: 100%; margin: .6rem 0}
+td, th {padding: .3rem .75rem; border-bottom: 1px solid #c9c5d2; text-align: left; font-variant-numeric: tabular-nums}
+.reference {margin: 1rem 0; border: 1px solid var(--line); border-radius: 8px; padding: .9rem; background: #fbf9ff}
+.reference img {width: 100%; height: auto; display: block}
+.reference figcaption {font-weight: 700}
+.foot {margin-top: 2rem; padding-block: 1.2rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); font-size: .88rem}
+#storage-status:empty {display: none}
+@media (max-width: 760px) {
+  .wrap {width: calc(100% - 2rem)}
+  .hero {grid-template-columns: 1.7fr 1fr; min-height: 0}
+  .hero-copy {padding-right: 0}
+  .falcon {width: 92%; max-width: none; right: 1%}
+  .progress-label progress {display: none}
+  #map {gap: .65rem}
+  .step, .step[aria-current=step] {padding: .55rem}
+  .step-meta {align-items: flex-start; flex-direction: column; gap: .1rem}
+  #workspace {grid-template-columns: 1fr; gap: .8rem}
+  .side {padding: .65rem}
+  .side h3 {margin-bottom: .4rem}
+  .side ol {display: flex; overflow-x: auto; gap: .3rem; padding: .3rem}
+  .side button {white-space: nowrap}
+  .foot {flex-direction: column}
+}
+@media (max-width: 520px) {
+  .long {display: none}
+  .short {display: inline}
+  .top {height: 55px}
+  .hero {grid-template-columns: 1fr; margin-top: 1rem}
+  .hero-copy {padding: 1.1rem; padding-right: 1rem}
+  .hero-copy > p:not(.kicker) {max-width: 80%; font-size: 1rem}
+  .art {position: absolute; top: .5rem; bottom: .5rem; right: -.9rem; width: 23%; opacity: .88; z-index: 0}
+  .falcon {top: 15%}
+  .hero h1 {max-width: 80%; font-size: 2.55rem}
+  .hero-actions {max-width: 84%}
+  .section-line {align-items: flex-start; flex-direction: column; gap: .2rem}
+  .journey {margin: 1.15rem 0}
+  #map {grid-template-columns: 1fr; gap: .45rem}
+  #map::before {inset: 1rem auto 1rem 1.8rem; border-left: 2px solid #b3a1c9}
+  .step, .step[aria-current=step] {display: flex; padding: .55rem .8rem; align-items: center}
+  .step-meta {flex: 1; flex-direction: row; align-items: center}
+  .step strong {order: 0; margin: 0 0 0 .6rem; flex: 1.2; font-size: 1rem}
+  .paper {padding: 1rem}
+}
+@media (prefers-reduced-motion: reduce) {html {scroll-behavior: auto}}
+.diagram-scroll {overflow-x: auto; margin-top: .3rem}
+.diagram-scroll img {min-width: 590px}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="280" viewBox="0 0 780 280" role="img" aria-labelledby="title desc">
+  <title id="title">Quantum teleportation with classical feed-forward</title>
+  <desc id="desc">From left to right, H on q1, CX from q1 to q2, CX from q0 to q1, H on q0, measurements q0 to c0 and q1 to c1, then X on q2 controlled by c1 and Z on q2 controlled by c0.</desc>
+  <defs>
+    <g id="h"><rect width="36" height="34" x="-18" y="-17" rx="4" fill="#e1d3f6" stroke="#53258d"/><text y="6" text-anchor="middle">H</text></g>
+    <g id="m"><rect width="36" height="34" x="-18" y="-17" rx="4" fill="#eef1fa" stroke="#343f5c"/><text y="6" text-anchor="middle">M</text></g>
+    <g id="target" stroke="#53258d" stroke-width="2"><circle r="12" fill="white"/><path d="M-9 0h18 M0 -9v18"/></g>
+  </defs>
+  <g font-family="system-ui,sans-serif" font-size="15" fill="#413958">
+    <text x="132" y="23">Share a pair</text><text x="259" y="23">Alice’s gates</text><text x="420" y="23">Measure</text><text x="562" y="23">Bob’s corrections</text>
+  </g>
+  <g fill="none" stroke="#59617a" stroke-width="2">
+    <path d="M103 62H408 M103 110H475 M103 158H720"/>
+    <path stroke="#969eb1" d="M103 213H705 M103 217H705 M103 249H705 M103 253H705"/>
+  </g>
+  <g fill="#211a37" font-family="ui-monospace,monospace" font-size="17">
+    <text x="10" y="68">q0 |ψ⟩</text><text x="10" y="116">q1 |0⟩</text><text x="10" y="164">q2 |0⟩</text>
+    <text x="44" y="221">c0</text><text x="44" y="257">c1</text>
+    <use href="#h" x="145" y="110"/>
+    <g stroke="#53258d" stroke-width="2"><path d="M205 110v48 M270 62v48"/><circle cx="205" cy="110" r="5" fill="#53258d"/><circle cx="270" cy="62" r="5" fill="#53258d"/></g>
+    <use href="#target" x="205" y="158"/><use href="#target" x="270" y="110"/><use href="#h" x="336" y="62"/>
+    <g fill="none" stroke="#616b85" stroke-width="1.6"><path d="M406 79v125 M410 79v125 M473 127v112 M477 127v112"/></g>
+    <path d="m402 203 6 9 6-9 M469 239l6 9 6-9" fill="#616b85"/>
+    <use href="#m" x="408" y="62"/><use href="#m" x="475" y="110"/>
+    <g fill="none" stroke="#53258d" stroke-width="1.6"><path d="M567 175v76 M571 175v76 M636 175v40 M640 175v40"/></g>
+    <g fill="#53258d"><circle cx="569" cy="251" r="5"/><circle cx="638" cy="215" r="5"/></g>
+    <g fill="#e1d3f6" stroke="#53258d"><rect x="551" y="141" width="36" height="34" rx="4"/><rect x="620" y="141" width="36" height="34" rx="4"/></g>
+    <text x="569" y="164" text-anchor="middle">X</text><text x="638" y="164" text-anchor="middle">Z</text><text x="727" y="164">|ψ⟩</text>
+  </g>
+</svg>
